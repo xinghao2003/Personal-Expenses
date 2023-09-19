@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name">Expenses</string>
+
+    <string name="title">Information</string>
+    <string name="page2">Transaction History</string>
+    <string name="recordSection">Record</string>
+
+    <string name="mLimit">Monthly Limit : %.2f</string>
+    <string name="cmSpending">Current Monthly Spending : %.2f</string>
+    <string name="rDays">Remaining Days : %d</string>
+    <string name="cdLimit">Current Daily Limit : %.2f</string>
+    <string name="lRecord">Last Record : %.2f, %s, %s, %s</string>
+
+    <string name="hintAmount">Amount (RM)</string>
+    <string name="hintPurpose">Purpose</string>
+    <string name="hintEvidence">Evidence</string>
+
+    <string name="bEvidence">Click here to add picture</string>
+    <string name="bReset">Reset</string>
+    <string name="bSave">Save</string>
+
+    <string name="mlDialog">Enter monthly limit : </string>
+
+    <string name="chipGroupTitle">Category / General Purpose</string>
+    <string name="chipFnB">FnB</string>
+    <string name="chipGrocery">Grocery</string>
+    <string name="chipEntertainment">Entertainment</string>
+    <string name="chipOther">Other</string>
+
+    <string name="locationText">Location : %.6f, %.6f</string>
+
+    <string name="transactionPurpose">%.20s</string>
+    <string name="transactionAmount">%.2f</string>
+    <string name="transactionCategory">%s</string>
+    <string name="transactionTime">%s</string>
+
+
+</resources>

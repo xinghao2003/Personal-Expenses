@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center|center_horizontal"
+    android:paddingHorizontal="20dp"
+    android:paddingVertical="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:paddingVertical="5dp"
+            android:text="@string/title"
+            android:textAlignment="textStart"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="10dp">
+
+                <TextView
+                    android:id="@+id/tvMonthlyLimit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:text="@string/mLimit"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tvCurrentMonthlySpending"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="2dp"
+                    android:text="@string/cmSpending"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tvRemainingDays"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="2dp"
+                    android:text="@string/rDays"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tvCurrentDailyLimit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="2dp"
+                    android:text="@string/cdLimit"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tvLastRecord"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="2dp"
+                    android:clickable="true"
+                    android:text="@string/lRecord"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="5dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:paddingVertical="5dp"
+            android:text="@string/recordSection"
+            android:textAlignment="textStart"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etAmount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="@string/hintAmount"
+                android:ems="10"
+                android:hint="@string/hintAmount"
+                android:inputType="numberDecimal"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="10dp"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/cgPurpose"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingVertical="2dp"
+            app:checkedChip="@id/chipOther"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipFnB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_chip_state_list"
+                android:checkable="true"
+                android:text="@string/chipFnB"
+                />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipGrocery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_chip_state_list"
+                android:checkable="true"
+                android:text="@string/chipGrocery" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipEntertainment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_chip_state_list"
+                android:checkable="true"
+                android:text="@string/chipEntertainment" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chipOther"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_chip_state_list"
+                android:checkable="true"
+                android:text="@string/chipOther" />
+        </com.google.android.material.chip.ChipGroup>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPurpose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="@string/hintPurpose"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="@string/hintPurpose"
+                android:inputType="textMultiLine"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="10dp"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <androidx.cardview.widget.CardView
+            style="@style/Widget.Material3.CardView.Filled"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentPadding="10dp"
+            >
+
+            <TextView
+                android:id="@+id/tvEvidence"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingVertical="5dp"
+                android:text="@string/bEvidence"
+                android:textAlignment="center"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:id="@+id/ivEvidence"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:adjustViewBounds="true"
+                android:clickable="true"
+                android:contentDescription="@string/hintEvidence"
+                android:paddingVertical="2dp"
+                android:scaleType="centerInside"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+        </androidx.cardview.widget.CardView>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+
+        <TextView
+            android:id="@+id/tvLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:clickable="true"
+            android:text="@string/locationText" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bReset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:text="@string/bReset" />
+
+            <Button
+                android:id="@+id/bSave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/bSave" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
